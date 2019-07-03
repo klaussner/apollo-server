@@ -226,7 +226,6 @@ export class ApolloGateway implements GraphQLService {
   }
 
   protected createSchema(services: ServiceDefinition[]) {
-    const previousSchema = this.schema;
     this.logger.debug(
       `Composing schema from service list: \n${services
         .map(({ name }) => `  ${name}`)
